@@ -98,18 +98,42 @@ function ChatRoom() {
 }
 
 function ChatMessage(props) {
-  const { text, uid, photoURL } = props.message;
+  const { text, uid, photoURL, id } = props.message;
 
   const messageClass = uid === auth.currentUser.uid ? 'sent' : 'received';
+
+  console.log(id);
 
   return (
     <>
       <div className={`message ${messageClass}`}>
         <img src={photoURL}></img>
         <p>{text}</p>
+        <button onClick={() => Modify(id)}>Modify</button>
+        <button onClick={() => Delete(id)}>Delete</button>
       </div>
     </>
   )
+}
+
+function Modify(id) {
+  firestore.collection('messages').where('id', '==', id).get().then(querySnapshot => {
+    querySnapshot.forEach(doc => {
+      console.log(doc.id);
+      firestore.collection('messages').doc(`${doc.id}`).update({
+        text: 'Modified!1235'
+      })
+    })
+  })
+}
+
+function Delete(id) {
+  firestore.collection('messages').where('id', '==', id).get().then(querySnapshot => {
+    querySnapshot.forEach(doc => {
+      console.log(doc.id);
+      firestore.collection('messages').doc(`${doc.id}`).delete()
+    })
+  })
 }
 
 export default App;
