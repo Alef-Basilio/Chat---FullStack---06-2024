@@ -1,0 +1,41 @@
+.signOut {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: blue;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-bottom: 40px;
+}
+
+.signOut button:hover {
+    background-color: red;
+}
+
+.signOut button:active {
+    background-color: brown;
+}
+
+.signOut h3, .signOut button {
+    cursor: pointer;
+    padding: 10px;
+    font-size: 15px;
+    color: white;
+    border-radius: 10px;
+    border: 3px solid white;
+}
+
+.signOut span {
+    font-size: 40px;
+    font-weight: bolder;
+    color: white;
+}
+
+.signOut h3 {
+    margin-left: 30px;
+}
+
+.signOut button {
+    background-color: transparent;
+    margin-right: 30px;
+}

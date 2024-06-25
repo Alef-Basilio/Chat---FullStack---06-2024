@@ -1,0 +1,58 @@
+.sent {
+    background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    height: fit-content;
+    width: fit-content;
+    max-width: 800px;
+    padding: 12px;
+    border-radius: 20px;
+    margin-right: 12px;
+}
+
+.actions {
+    display: flex;
+    justify-content: start;
+    width: 100%;
+    min-width: 250px;
+}
+
+.actions img {
+    height: 45px;
+    border-radius: 15px;
+}
+
+.actions div {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+
+.actions div button {
+    cursor: pointer;
+    padding: 5px;
+    background-color: transparent;
+    border-radius: 8px;
+    border: 1px solid black;
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+}
+
+@media (max-width: 1100px) {
+    .sent {
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 830px) {
+    .sent {
+        max-width: 85%;
+    }
+}
