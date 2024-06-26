@@ -25,6 +25,7 @@ export default function ChatRoom() {
     const [formValue, setFormValue] = React.useState('');
     const [x, setX] = React.useState(1);
     const lastMessage = messageRef.orderBy('id', 'desc').limit(1);
+    //const textarea = document.querySelectorAll('textarea');
 
     const sendMessage = async (e) => {
         e.preventDefault();
@@ -41,6 +42,10 @@ export default function ChatRoom() {
 
         setFormValue('');
 
+        /*console.log(textarea[textarea.length].style.height)
+
+        textarea[textarea.length-1].style.height = `${textarea[textarea.length-1].scrollHeight}px`;*/
+
         dummy.current.scrollIntoView({ behavior: 'smooth' });
     }
 
@@ -50,6 +55,14 @@ export default function ChatRoom() {
   
     return (
       <>
+        <div id='standard'>
+            <div className='actions'>
+                <img src={'../google.png'}></img>
+            </div>
+            <div className='content'>
+                <textarea id='example' type='text' readOnly value={'exampleaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'}></textarea>
+            </div>
+        </div>
         <main>
             {messages ? messages.map(msg => <ChatMessage key={msg.id} message={msg}/>) : <></>}
             <div ref={dummy}></div>
@@ -64,3 +77,11 @@ export default function ChatRoom() {
       </>
     )
 }
+
+function adjustTextareaHeight() {
+    const textarea = document.getElementById('example');
+    
+    textarea.style.height = `${textarea.scrollHeight}px`;
+}
+
+setTimeout(adjustTextareaHeight, 1000);

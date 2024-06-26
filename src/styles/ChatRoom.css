@@ -1,3 +1,44 @@
+#standard {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: fit-content;
+    max-width: 800px;
+    padding: 12px;
+    gap: 10px;
+    border-radius: 20px;
+    margin-left: 12px;
+    margin-bottom: 20px;
+}
+
+.actions {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    min-width: 250px;
+}
+
+.actions img {
+    height: 45px;
+    border-radius: 15px;
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+}
+
+#example {
+    resize: none;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+    background-color: transparent;
+    border: none;
+}
+
 main {
     gap: 20px;
     display: flex;
@@ -21,7 +62,7 @@ form div {
 }
 
 form input {
-    width: 762px;
+    width: inherit;
     padding: 10px;
     background-color: yellow;
     padding-right: 56px;
@@ -48,5 +89,25 @@ form button {
 
     form div {
         width: 500px;
+    }
+}
+
+@media (max-width: 830px) {
+    form {
+        width: 88%;
+    }
+
+    form div {
+        width: 300px;
+    }
+}
+
+@media (max-width: 500px) {
+    form {
+        width: 82%;
+    }
+
+    form div {
+        width: 220px;
     }
 }

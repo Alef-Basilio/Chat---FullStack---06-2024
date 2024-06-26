@@ -21,12 +21,12 @@ const messageClass = uid === auth.currentUser.uid ? 'sent' : 'received';
                 <div className='actions'>
                     <img src={photoURL}></img>
                     <div>
-                        <button onClick={() => Modify(id)}>Modify</button>
-                        <button onClick={() => Delete(id)}>Delete</button>
+                        <button className={'modify' + id} onClick={() => Modify(id)}>Modify</button>
+                        <button className='delete' onClick={() => Delete(id)}>Delete</button>
                     </div>
                 </div>
                 <div className='content'>
-                    <p>{text}</p>
+                    <textarea readOnly id={'textarea' + id} key={id} onChange={() => adjustTextareaHeight()}>{text}</textarea>
                 </div>
             </div>
         </>
@@ -34,11 +34,24 @@ const messageClass = uid === auth.currentUser.uid ? 'sent' : 'received';
 }
 
 function Modify(id) {
+    const textarea = document.getElementById(`textarea${id}`);
+    const modify = document.getElementsByClassName('modify'+id+'');
+
+    if (textarea.readOnly) {
+        textarea.removeAttribute('readOnly');
+        modify[0].textContent = 'Send';
+        modify[0].style.backgroundColor = 'green';
+    } else {
+        textarea.setAttribute('readOnly', 'true');
+        modify[0].textContent = 'Modify';
+        modify[0].style.backgroundColor = 'yellow';
+    }
+    
+
     firestore.collection('messages').where('id', '==', id).get().then(querySnapshot => {
         querySnapshot.forEach(doc => {
-            console.log(doc.id);
             firestore.collection('messages').doc(`${doc.id}`).update({
-                text: 'Modified!1235'
+                text: textarea.value
             })
         })
     })
@@ -47,8 +60,18 @@ function Modify(id) {
 function Delete(id) {
     firestore.collection('messages').where('id', '==', id).get().then(querySnapshot => {
         querySnapshot.forEach(doc => {
-            console.log(doc.id);
             firestore.collection('messages').doc(`${doc.id}`).delete()
         })
     })
 }
+
+function adjustTextareaHeight() {
+    const textarea = document.querySelectorAll('textarea');
+
+    for (let i = 0; i < textarea.length; i++) {
+        textarea[i].style.height = '1px';
+        textarea[i].style.height = `${textarea[i].scrollHeight}px`;
+    }
+}
+
+setTimeout(adjustTextareaHeight, 1000);

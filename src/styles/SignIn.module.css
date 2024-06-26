@@ -67,3 +67,16 @@
 .logIn button:active {
     background-color: green;
 }
+
+@media (max-width: 700px) {
+    .logIn {
+        width: 350px;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logIn {
+        width: 240px;
+    }
+}
