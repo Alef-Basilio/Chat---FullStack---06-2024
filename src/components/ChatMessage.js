@@ -70,8 +70,27 @@ function adjustTextareaHeight() {
 
     for (let i = 0; i < textarea.length; i++) {
         textarea[i].style.height = '1px';
-        textarea[i].style.height = `${textarea[i].scrollHeight}px`;
+        textarea[i].style.height = `${textarea[i].scrollHeight}px`; 
     }
 }
 
-setTimeout(adjustTextareaHeight, 1000);
+//setTimeout(adjustTextareaHeight, 1000);
+
+function sendResize() {
+    const messageSent = document.querySelectorAll('textarea')
+    const sent = document.getElementsByClassName('sent');
+
+    for (let i = 0; i < messageSent.length; i++) {
+        messageSent[i].style.width = '500px';
+        if (window.innerWidth > 1100) {
+            if (messageSent[i].textContent.length > 30) {
+                messageSent[i].style.height = `${messageSent[i].scrollHeight}px`;
+                messageSent[i].style.width = `70vw`;
+            } else {
+                messageSent[i].style.width = '100%';
+            }
+        }
+    }
+}
+
+window.setTimeout(sendResize, 2000)

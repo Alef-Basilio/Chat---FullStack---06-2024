@@ -25,7 +25,6 @@ export default function ChatRoom() {
     const [formValue, setFormValue] = React.useState('');
     const [x, setX] = React.useState(1);
     const lastMessage = messageRef.orderBy('id', 'desc').limit(1);
-    //const textarea = document.querySelectorAll('textarea');
 
     const sendMessage = async (e) => {
         e.preventDefault();
@@ -42,9 +41,19 @@ export default function ChatRoom() {
 
         setFormValue('');
 
-        /*console.log(textarea[textarea.length].style.height)
+        const messageSent = document.querySelectorAll('textarea');
 
-        textarea[textarea.length-1].style.height = `${textarea[textarea.length-1].scrollHeight}px`;*/
+        for (let i = 0; i < messageSent.length; i++) {
+            messageSent[i].style.width = '500px';
+            if (window.innerWidth > 1100) {
+                if (messageSent[i].textContent.length > 30) {
+                    messageSent[i].style.height = `${messageSent[i].scrollHeight}px`;
+                    messageSent[i].style.width = `70vw`;
+                } else {
+                    messageSent[i].style.width = '100%';
+                }
+            }
+        }
 
         dummy.current.scrollIntoView({ behavior: 'smooth' });
     }

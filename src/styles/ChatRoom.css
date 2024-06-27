@@ -2,9 +2,7 @@
     background-color: white;
     display: flex;
     flex-direction: column;
-    height: fit-content;
-    width: fit-content;
-    max-width: 800px;
+    width: 500px;
     padding: 12px;
     gap: 10px;
     border-radius: 20px;
@@ -45,6 +43,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: end;
+    width: 100%;
     margin-bottom: 50px;
 }
 
