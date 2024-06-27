@@ -2,50 +2,55 @@ import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 
-import initializeApp from './InitializeApp';
-import MessageWidth from './MessageWidth';
+import InitializeApp from './InitializeApp';
+import LoadReceivedTheme from './LoadReceivedTheme';
+import MessageMeasures from './MessageMeasures';
 
 import '../styles/ChatMessage.css';
 
-initializeApp();
+InitializeApp();
 
 const auth = firebase.auth();
 const firestore = firebase.firestore();
 
 export default function ChatMessage(props) {
 const { text, uid, photoURL, id } = props.message;
-const messageClass = uid === auth.currentUser.uid ? 'sent' : 'received';
+const messageClass = uid === auth.currentUser.uid ? 'sent' : '';
 
     return (
         <>
             <div className={`message ${messageClass}`}>
                 <div className='actions'>
-                    <img src={photoURL}></img>
+                    <img src={photoURL} alt='user_image'></img>
                     <div>
-                        <button className={'modify' + id} onClick={() => Modify(id)}>Modify</button>
+                        <button id={'modify' + id} onClick={() => Modify(id)}>Modify</button>
                         <button className='delete' onClick={() => Delete(id)}>Delete</button>
                     </div>
                 </div>
                 <div className='content'>
-                    <textarea readOnly id={'textarea' + id} key={id} onChange={() => MessageWidth()}>{text}</textarea>
+                    <textarea readOnly id={'textarea' + id} key={id} onChange={() => MessageMeasures}>{text}</textarea>
                 </div>
             </div>
         </>
     )
 }
 
+window.setInterval(LoadReceivedTheme, 2000);
+MessageMeasures();
+window.setInterval(MessageMeasures, 2000);
+
 function Modify(id) {
     const textarea = document.getElementById(`textarea${id}`);
-    const modify = document.getElementsByClassName('modify'+id+'');
+    const modify = document.getElementById(`modify${id}`);
 
     if (textarea.readOnly) {
         textarea.removeAttribute('readOnly');
-        modify[0].textContent = 'Send';
-        modify[0].style.backgroundColor = 'green';
+        modify.textContent = 'Send';
+        modify.style.backgroundColor = 'green';
     } else {
         textarea.setAttribute('readOnly', 'true');
-        modify[0].textContent = 'Modify';
-        modify[0].style.backgroundColor = 'yellow';
+        modify.textContent = 'Modify';
+        modify.style.backgroundColor = 'yellow';
     }
     
 
@@ -65,16 +70,3 @@ function Delete(id) {
         })
     })
 }
-
-/*function adjustTextareaHeight() {
-    const textarea = document.querySelectorAll('textarea');
-
-    for (let i = 0; i < textarea.length; i++) {
-        textarea[i].style.height = '1px';
-        textarea[i].style.height = `${textarea[i].scrollHeight}px`; 
-    }
-}
-
-MessageWidth();*/
-
-window.setTimeout(MessageWidth, 2000)

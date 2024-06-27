@@ -13,7 +13,6 @@
     display: flex;
     justify-content: start;
     width: 100%;
-    /*min-width: 200px;*/
 }
 
 .actions img {
@@ -42,28 +41,14 @@
 }
 
 .content {
-    /*width: 100%;*/
     display: flex;
     justify-content: start;
 }
 
 .content textarea {
     resize: none;
-    /*width: 500px;*/
     padding: 0;
     scrollbar-width: none;
     background-color: transparent;
     border: none;
 }
-
-/*@media (max-width: 1100px) {
-    .sent {
-        max-width: 600px;
-    }
-}
-
-@media (max-width: 830px) {
-    .sent {
-        max-width: 85%;
-    }
-}*/

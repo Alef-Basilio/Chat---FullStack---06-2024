@@ -7,20 +7,19 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  margin: 0;
 }
 
 ::-webkit-scrollbar {
   width: 15px;
-  background-color: #555;
+  background-color: #999;
 }
 
 ::-webkit-scrollbar-button {
   background-color: yellow;
+  border: 1px solid black;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: blue;
+  background-color: yellow;
+  border: 1px solid black;
 }

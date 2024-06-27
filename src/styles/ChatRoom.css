@@ -1,5 +1,4 @@
-#standard {
-    background-color: white;
+.received {
     display: flex;
     flex-direction: column;
     width: fit-content;
@@ -10,29 +9,8 @@
     margin-bottom: 20px;
 }
 
-.actions2 {
-    display: flex;
+.actions {
     justify-content: end;
-    width: 100%;
-    /*min-width: 250px;*/
-}
-
-.actions2 img {
-    height: 45px;
-    border-radius: 15px;
-}
-
-.content2 {
-    display: flex;
-    justify-content: start;
-}
-
-#example {
-    resize: none;
-    padding: 0;
-    overflow: hidden;
-    background-color: transparent;
-    border: none;
 }
 
 main {

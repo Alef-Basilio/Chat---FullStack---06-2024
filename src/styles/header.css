@@ -1,4 +1,4 @@
-.signOut {
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -8,15 +8,15 @@
     margin-bottom: 40px;
 }
 
-.signOut button:hover {
+header button:hover {
     background-color: red;
 }
 
-.signOut button:active {
+header button:active {
     background-color: brown;
 }
 
-.signOut h3, .signOut button {
+header h3, header button {
     cursor: pointer;
     padding: 10px;
     font-size: 15px;
@@ -25,17 +25,27 @@
     border: 3px solid white;
 }
 
-.signOut span {
+header span {
     font-size: 40px;
     font-weight: bolder;
     color: white;
 }
 
-.signOut h3 {
+header h3 {
     margin-left: 30px;
 }
 
-.signOut button {
+header button {
     background-color: transparent;
     margin-right: 30px;
+}
+
+@media (max-width: 360px) {
+    header span {
+        font-size: 30px;
+    }
+    
+    header h3, header button {
+        font-size: 13px;
+    }
 }

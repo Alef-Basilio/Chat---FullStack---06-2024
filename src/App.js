@@ -7,13 +7,13 @@ import 'firebase/compat/firestore';
 
 import { useAuthState } from 'react-firebase-hooks/auth';
 
-import initializeApp from './components/InitializeApp';
+import InitializeApp from './components/InitializeApp';
 import ChatRoom from './components/ChatRoom';
 import SignIn from './components/SignIn';
-import SignOut from './components/SignOut';
-import ColorThemeLoad from './components/ColorThemeLoad';
+import Header from './components/Header';
+import LoadColorTheme from './components/LoadColorTheme';
 
-initializeApp();
+InitializeApp();
 
 export default function App() {
   const [user] = useAuthState(firebase.auth());
@@ -21,10 +21,10 @@ export default function App() {
   return (
     <div className="App">
       <section>
-        { user ? <> <SignOut/> <ChatRoom/> </> : <SignIn/> }
+        { user ? <> <Header/> <ChatRoom/> </> : <SignIn/> }
       </section>
     </div>
   );
 }
 
-ColorThemeLoad();
+LoadColorTheme();
