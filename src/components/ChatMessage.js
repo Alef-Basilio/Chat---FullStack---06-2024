@@ -3,6 +3,7 @@ import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 
 import initializeApp from './InitializeApp';
+import MessageWidth from './MessageWidth';
 
 import '../styles/ChatMessage.css';
 
@@ -26,7 +27,7 @@ const messageClass = uid === auth.currentUser.uid ? 'sent' : 'received';
                     </div>
                 </div>
                 <div className='content'>
-                    <textarea readOnly id={'textarea' + id} key={id} onChange={() => adjustTextareaHeight()}>{text}</textarea>
+                    <textarea readOnly id={'textarea' + id} key={id} onChange={() => MessageWidth()}>{text}</textarea>
                 </div>
             </div>
         </>
@@ -65,7 +66,7 @@ function Delete(id) {
     })
 }
 
-function adjustTextareaHeight() {
+/*function adjustTextareaHeight() {
     const textarea = document.querySelectorAll('textarea');
 
     for (let i = 0; i < textarea.length; i++) {
@@ -74,23 +75,6 @@ function adjustTextareaHeight() {
     }
 }
 
-//setTimeout(adjustTextareaHeight, 1000);
+MessageWidth();*/
 
-function sendResize() {
-    const messageSent = document.querySelectorAll('textarea')
-    const sent = document.getElementsByClassName('sent');
-
-    for (let i = 0; i < messageSent.length; i++) {
-        messageSent[i].style.width = '500px';
-        if (window.innerWidth > 1100) {
-            if (messageSent[i].textContent.length > 30) {
-                messageSent[i].style.height = `${messageSent[i].scrollHeight}px`;
-                messageSent[i].style.width = `70vw`;
-            } else {
-                messageSent[i].style.width = '100%';
-            }
-        }
-    }
-}
-
-window.setTimeout(sendResize, 2000)
+window.setTimeout(MessageWidth, 2000)

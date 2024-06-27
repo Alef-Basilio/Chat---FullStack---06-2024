@@ -14,7 +14,7 @@
     display: flex;
     justify-content: start;
     width: 100%;
-    min-width: 250px;
+    /*min-width: 200px;*/
 }
 
 .actions img {
@@ -57,7 +57,7 @@
     border: none;
 }
 
-@media (max-width: 1100px) {
+/*@media (max-width: 1100px) {
     .sent {
         max-width: 600px;
     }
@@ -67,4 +67,4 @@
     .sent {
         max-width: 85%;
     }
-}
+}*/

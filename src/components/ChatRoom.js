@@ -8,6 +8,8 @@ import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 
 import initializeApp from './InitializeApp';
+import MessageWidth from './MessageWidth';
+import StandardMessageWidth from './StandardMessageWidth';
 
 import '../styles/ChatRoom.css';
 //import { orderBy } from 'firebase/firestore';
@@ -41,19 +43,7 @@ export default function ChatRoom() {
 
         setFormValue('');
 
-        const messageSent = document.querySelectorAll('textarea');
-
-        for (let i = 0; i < messageSent.length; i++) {
-            messageSent[i].style.width = '500px';
-            if (window.innerWidth > 1100) {
-                if (messageSent[i].textContent.length > 30) {
-                    messageSent[i].style.height = `${messageSent[i].scrollHeight}px`;
-                    messageSent[i].style.width = `70vw`;
-                } else {
-                    messageSent[i].style.width = '100%';
-                }
-            }
-        }
+        MessageWidth();
 
         dummy.current.scrollIntoView({ behavior: 'smooth' });
     }
@@ -87,10 +77,13 @@ export default function ChatRoom() {
     )
 }
 
-function adjustTextareaHeight() {
+/*function adjustTextareaHeight() {
     const textarea = document.getElementById('example');
     
+    textarea.style.height = `1px`;
     textarea.style.height = `${textarea.scrollHeight}px`;
 }
 
-setTimeout(adjustTextareaHeight, 1000);
+setTimeout(adjustTextareaHeight, 1000);*/
+
+window.setTimeout(StandardMessageWidth, 2000)

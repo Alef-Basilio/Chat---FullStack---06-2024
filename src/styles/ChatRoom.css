@@ -2,7 +2,7 @@
     background-color: white;
     display: flex;
     flex-direction: column;
-    width: 500px;
+    width: fit-content;
     padding: 12px;
     gap: 10px;
     border-radius: 20px;
@@ -14,7 +14,7 @@
     display: flex;
     justify-content: end;
     width: 100%;
-    min-width: 250px;
+    /*min-width: 250px;*/
 }
 
 .actions img {
@@ -23,14 +23,12 @@
 }
 
 .content {
-    width: 100%;
     display: flex;
     justify-content: start;
 }
 
 #example {
     resize: none;
-    width: 100%;
     padding: 0;
     overflow: hidden;
     background-color: transparent;
