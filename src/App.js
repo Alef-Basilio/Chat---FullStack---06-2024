@@ -11,6 +11,7 @@ import initializeApp from './components/InitializeApp';
 import ChatRoom from './components/ChatRoom';
 import SignIn from './components/SignIn';
 import SignOut from './components/SignOut';
+import ColorThemeLoad from './components/ColorThemeLoad';
 
 initializeApp();
 
@@ -25,3 +26,5 @@ export default function App() {
     </div>
   );
 }
+
+ColorThemeLoad();

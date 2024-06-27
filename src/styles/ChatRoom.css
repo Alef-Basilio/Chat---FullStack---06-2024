@@ -10,19 +10,19 @@
     margin-bottom: 20px;
 }
 
-.actions {
+.actions2 {
     display: flex;
     justify-content: end;
     width: 100%;
     /*min-width: 250px;*/
 }
 
-.actions img {
+.actions2 img {
     height: 45px;
     border-radius: 15px;
 }
 
-.content {
+.content2 {
     display: flex;
     justify-content: start;
 }

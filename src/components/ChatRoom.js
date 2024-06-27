@@ -55,11 +55,11 @@ export default function ChatRoom() {
     return (
       <>
         <div id='standard'>
-            <div className='actions'>
+            <div className='actions2'>
                 <img src={'../google.png'}></img>
             </div>
-            <div className='content'>
-                <textarea id='example' type='text' readOnly value={'exampleaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'}></textarea>
+            <div className='content2'>
+                <textarea id='example' type='text' readOnly defaultValue={'exampleaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'}></textarea>
             </div>
         </div>
         <main>
@@ -69,7 +69,7 @@ export default function ChatRoom() {
   
         <form onSubmit={sendMessage}>
             <div>
-                <input value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder="say something nice"/>
+                <input defaultValue={formValue} onChange={(e) => setFormValue(e.target.defaultValue)} placeholder="say something nice"/>
                 <button type='submit'>Send</button>
             </div>
         </form>
