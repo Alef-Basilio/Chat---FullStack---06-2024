@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+<h2 align="center">Deploy link:</h2>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+@[Product Online Store](https://alef-basilio.github.io/E-commerce---FrontEnd/)
 
-## Available Scripts
+```
+https://alef-basilio.github.io/E-commerce---FrontEnd/
+```
 
-In the project directory, you can run:
 
-### `npm start`
+<h1 align="center" style="color: #805ad5; font-weight: bold;">Product Online Store</h1>
+<p align="center">
+Topics: 
+<a href="#tech">Technolgies</a> |
+<a href="#how">How was made</a> |
+<a href="#obj">Objective</a>
+</p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<p align="center">
+<b>An e-commerce where the user can browse the home page and see the products.</b>
+</p>
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<p align="center">
+  <p align="center">
+    <img src="./public/assets/images/interface.png" width="100%">
+  </p>
+</p>
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<h2 id="tech" align="center">Technologies</h2>
+HTML, CSS and JavaScript.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### API:
+Fake Store Api.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+<h2 id="how" align="center">How was made</h2>
+I was inspired by common things in the interface of other e-commerces and aimed to standardize the code for easy reading through order patterns, also using naming methods for functions, classes and files.
+</br>
+I made a class in the API fetch trying to make it easier to use later, but I didn't follow SOLID's Single Responsibility Principle, although it really made it easier.
+</br>
+All elements was responsive since from creation for all different devices.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<h2 id="obj" align="center">Objective</h2>
+Understand how different technologies (JS, Git, etc.) and concepts are combined into the same application.
