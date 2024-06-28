@@ -37,7 +37,7 @@ const messageClass = uid === auth.currentUser.uid ? 'sent' : '';
 
 window.setInterval(LoadMessageTheme, 2000);
 MessageMeasures();
-window.setInterval(() => { MessageMeasures() }, 2000);
+window.setInterval(MessageMeasures, 2000);
 
 function Modify(id) {
     const textarea = document.getElementById(`textarea${id}`);

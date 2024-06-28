@@ -7,7 +7,6 @@ export default function MessageMeasures() {
         const vwTwo = '30vw';
         const vwThree = '50vw';
         const vwFour = '70vw';
-
         let textContent = allTextareas[i].textContent;
 
         allTextareas[i].style.width = '100%';
