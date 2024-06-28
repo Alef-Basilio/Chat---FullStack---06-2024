@@ -44,4 +44,4 @@ All elements was responsive since from creation for all different devices.
 
 
 <h2 id="obj" align="center">Objective</h2>
-Understand how different technologies (JS, Git, etc.) and concepts are combined into the same application.
+To develop a full-stack application to know better the server and client side and show my skills with databases.
