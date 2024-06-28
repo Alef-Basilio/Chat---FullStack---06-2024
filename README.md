@@ -17,7 +17,7 @@ Topics:
 
 
 <p align="center">
-<b>An e-commerce where the user can browse the home page and see the products.</b>
+<b>A site for chatting with other people through a friendly and fun interface.</b>
 </p>
 
 
@@ -29,10 +29,10 @@ Topics:
 
 
 <h2 id="tech" align="center">Technologies</h2>
-HTML, CSS and JavaScript.
+HTML, CSS, JavaScript and React.
 
-### API:
-Fake Store Api.
+### DB:
+Firebase.
 
 
 <h2 id="how" align="center">How was made</h2>
