@@ -23,7 +23,7 @@ Topics:
 
 <p align="center">
   <p align="center">
-    <img src="./public/assets/images/interface.png" width="100%">
+    <img src="./public/interface.jpg" width="100%">
   </p>
 </p>
 
