@@ -36,11 +36,11 @@ Firebase.
 
 
 <h2 id="how" align="center">How was made</h2>
-I was inspired by common things in the interface of other e-commerces and aimed to standardize the code for easy reading through order patterns, also using naming methods for functions, classes and files.
+The hardest thing was to implement the text by the user. The solution was a component to check by time the messages measures.
 </br>
-I made a class in the API fetch trying to make it easier to use later, but I didn't follow SOLID's Single Responsibility Principle, although it really made it easier.
+The application implements various functionalities such as: Login, Log out, local storage etc.
 </br>
-All elements was responsive since from creation for all different devices.
+The adjust of the messages texts include responsive for many dispositives.
 
 
 <h2 id="obj" align="center">Objective</h2>
