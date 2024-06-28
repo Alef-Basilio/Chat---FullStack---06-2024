@@ -11,7 +11,7 @@ import InitializeApp from './components/InitializeApp';
 import ChatRoom from './components/ChatRoom';
 import SignIn from './components/SignIn';
 import Header from './components/Header';
-import LoadColorTheme from './components/LoadColorTheme';
+import LoadBackgroundTheme from './components/LoadBackgroundTheme';
 
 InitializeApp();
 
@@ -27,4 +27,4 @@ export default function App() {
   );
 }
 
-LoadColorTheme();
+LoadBackgroundTheme();

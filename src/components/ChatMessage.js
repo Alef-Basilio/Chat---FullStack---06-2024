@@ -3,7 +3,7 @@ import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 
 import InitializeApp from './InitializeApp';
-import LoadReceivedTheme from './LoadReceivedTheme';
+import LoadMessageTheme from './LoadMessageTheme';
 import MessageMeasures from './MessageMeasures';
 
 import '../styles/ChatMessage.css';
@@ -35,9 +35,9 @@ const messageClass = uid === auth.currentUser.uid ? 'sent' : '';
     )
 }
 
-window.setInterval(LoadReceivedTheme, 2000);
+window.setInterval(LoadMessageTheme, 2000);
 MessageMeasures();
-window.setInterval(MessageMeasures, 2000);
+window.setInterval(() => { MessageMeasures() }, 2000);
 
 function Modify(id) {
     const textarea = document.getElementById(`textarea${id}`);
@@ -46,11 +46,11 @@ function Modify(id) {
     if (textarea.readOnly) {
         textarea.removeAttribute('readOnly');
         modify.textContent = 'Send';
-        modify.style.backgroundColor = 'green';
+        modify.style.backgroundColor = '#47d000';
     } else {
         textarea.setAttribute('readOnly', 'true');
         modify.textContent = 'Modify';
-        modify.style.backgroundColor = 'yellow';
+        modify.style.backgroundColor = 'rgb(255, 255, 0)';
     }
     
 

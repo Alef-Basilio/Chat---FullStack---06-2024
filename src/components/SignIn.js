@@ -23,7 +23,7 @@ export default function SignIn() {
             <button onClick={signInWithGoogle}>Sign in with Google</button>
             <img src='../google.png' alt='google_logo'/>
           </div>
-          <span>So perhaps, you've generated some fancy text, and you're content that you can now copy and paste your fancy text in the comments section of funny cat videos, but perhaps you're wondering how it's even possible to change the font of your text? Is it some sort of hack? Are you copying and pasting an actual font?
+          <span>Hello everything is fine? This is how conversations can start on Chatie, a site for chatting with other people through a friendly and fun interface. This name was chosen to generate sympathy, as well as you will share it with others!
           </span>
         </div>
       </div>

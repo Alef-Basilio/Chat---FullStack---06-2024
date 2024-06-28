@@ -34,13 +34,13 @@ function changeTheme() {
         'linear-gradient(220deg, rgba(32,33,0,1) 0%, rgba(0,24,102,1) 100%)';
         h3.textContent = 'Light';
         localStorage.setItem('nextTheme', 'Light');
-        received.style.backgroundColor = 'white';
-        receivedTextarea.style.color = 'black';
+        received.style.backgroundColor = 'rgb(255, 255, 255)';
+        receivedTextarea.style.color = 'rgb(0, 0, 0)';
     } else {
         document.getElementsByClassName('App')[0].style.background = 'white';
         h3.textContent = 'Dark';
         localStorage.setItem('nextTheme', 'Dark');
         received.style.backgroundColor = '#666';
-        receivedTextarea.style.color = 'white';
+        receivedTextarea.style.color = 'rgb(255, 255, 255)';
     }
 }

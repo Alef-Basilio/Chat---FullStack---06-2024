@@ -12,7 +12,7 @@
     justify-content: center;
     align-items: center;
     height: fit-content;
-    background-color: blue;
+    background-color: rgb(0, 0, 255);
     height: fit-content;
     width: 500px;
     padding: 18px;
@@ -22,11 +22,12 @@
 }
 
 .content h1 {
+    cursor: pointer;
     display: flex;
     align-items: center;
     font-size: 55px;
     font-weight: bolder;
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 .content div {
@@ -37,10 +38,11 @@
 }
 
 .content img {
+    cursor: pointer;
     height: 40px;
     width: fit-content;
     padding: 5px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     border-radius: 50%;
 }
 
@@ -48,24 +50,24 @@
     cursor: pointer;
     padding: 10px;
     font-size: 15px;
-    color: white;
+    color: rgb(255, 255, 255);
     background-color: transparent;
     border-radius: 10px;
-    border: 3px solid white;
+    border: 3px solid rgb(255, 255, 255);
 }
 
 .content span {
     padding: 12px;
-    background-color: yellow;
+    background-color: rgb(255, 255, 0);
     border-radius: 15px;
 }
 
 .content button:hover {
-    background-color: greenyellow;
+    background-color: #47d000;
 }
 
 .content button:active {
-    background-color: green;
+    background-color: #2e8a00;
 }
 
 @media (max-width: 700px) {

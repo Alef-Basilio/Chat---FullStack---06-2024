@@ -8,8 +8,6 @@ import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 
 import InitializeApp from './InitializeApp';
-//import LoadReceivedTheme from './LoadReceivedTheme';
-//import MessageMeasures from './MessageMeasures';
 
 import '../styles/ChatRoom.css';
 
@@ -44,9 +42,6 @@ export default function ChatRoom() {
 
         setFormValue('');
 
-        //LoadReceivedTheme();
-        //MessageMeasures();
-
         scrollDown.current.scrollIntoView({ behavior: 'smooth' });
     }
 
@@ -58,11 +53,11 @@ export default function ChatRoom() {
       <>
         <div className='received message'>
             <div className='actions'>
-                <img src={'../google.png'} alt='google_logo'></img>
+                <img src={'../receivedUser.jfif'} alt='google_logo'></img>
             </div>
             <div className='content'>
                 <textarea id='receivedTextarea' type='text' readOnly 
-                    defaultValue={'exampleaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'}>
+                    defaultValue={'Tell me something interesting that you like that other people might not know... or just a fun fact :)'}>
                 </textarea>
             </div>
         </div>
