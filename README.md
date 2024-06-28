@@ -38,7 +38,7 @@ Firebase.
 <h2 id="how" align="center">How was made</h2>
 The hardest thing was to implement the text by the user. The solution was a component to check by time the messages measures.
 </br>
-The application implements various functionalities such as: Login, Log out, local storage etc.
+The application implements various functionalities such as: login, log out, local storage etc.
 </br>
 The adjust of the messages texts include responsive for many dispositives.
 
