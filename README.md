@@ -1,13 +1,13 @@
 <h2 align="center">Deploy link:</h2>
 
-@[Product Online Store](https://alef-basilio.github.io/E-commerce---FrontEnd/)
+@[Chatie](https://chat-fullstack-steel.vercel.app/)
 
 ```
-https://alef-basilio.github.io/E-commerce---FrontEnd/
+https://chat-fullstack-steel.vercel.app/
 ```
 
 
-<h1 align="center" style="color: #805ad5; font-weight: bold;">Product Online Store</h1>
+<h1 align="center" style="color: #805ad5; font-weight: bold;">Chatie</h1>
 <p align="center">
 Topics: 
 <a href="#tech">Technolgies</a> |
