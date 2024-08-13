@@ -36,7 +36,7 @@ Firebase.
 
 
 <h2 id="how" align="center">How was made</h2>
-The hardest thing was to implement the text by the user. The solution was a component to check by time the messages measures.
+The hardest thing was to implement the text by the user. The solution was a component that checks the length of the messages over time and transforms them according to the screen.
 </br>
 The application implements various functionalities such as: login, log out, local storage etc.
 </br>
