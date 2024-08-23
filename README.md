@@ -29,7 +29,7 @@ Topics:
 
 
 <h2 id="tech" align="center">Technologies</h2>
-HTML, CSS, JavaScript and React.
+Firebase, React, JavaScript, HTML and CSS.
 
 ### DB:
 Firebase.
